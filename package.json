@@ -1,0 +1,23 @@
+{
+  "name": "weclapp-mcp-server",
+  "version": "1.0.0",
+  "description": "Remote MCP server exposing weclapp data as tools for Claude",
+  "type": "module",
+  "main": "server.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "node-fetch": "^3.3.2",
+    "zod": "^4.4.3"
+  }
+}
