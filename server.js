@@ -8,11 +8,15 @@
 // Claude never sees it - it just calls this server's tools.
 
 import "dotenv/config";
+import { webcrypto } from "node:crypto";
 import express from "express";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { z } from "zod";
 
+if (!globalThis.crypto) {
+  globalThis.crypto = webcrypto;
+}
 const {
   WECLAPP_BASE_URL,
   WECLAPP_API_TOKEN,
